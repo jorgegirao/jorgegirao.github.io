@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Interactivo de Inversiones Financieras</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    Inversiones Financieras
+                </h1>
+                <div class="header-controls">
+                    <div class="text-size-selector">
+                        <label for="textSize">Tamaño de texto:</label>
+                        <select id="textSize">
+                            <option value="small">Pequeño</option>
+                            <option value="medium" selected>Mediano</option>
+                            <option value="large">Grande</option>
+                        </select>
+                    </div>
+                    <button id="glossaryBtn" class="btn-secondary">
+                        <i class="fas fa-book"></i>
+                        Glosario
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="progressText">Progreso: 0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section id="welcome" class="section active">
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h2>Bienvenido al Curso de Inversiones Financieras</h2>
+                        <p>Aprende desde cero hasta un nivel avanzado sobre el mundo de las inversiones financieras. Este curso te llevará paso a paso desde conceptos básicos hasta estrategias avanzadas.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>5 Niveles Progresivos</h3>
+                                <p>Desde conceptos básicos hasta estrategias avanzadas</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-gamepad"></i>
+                                <h3>Ejercicios Interactivos</h3>
+                                <p>Quizzes, simulaciones y casos prácticos</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h3>Diseño Responsive</h3>
+                                <p>Accede desde cualquier dispositivo</p>
+                            </div>
+                        </div>
+                        <button id="startCourseBtn" class="btn-primary">
+                            <i class="fas fa-play"></i>
+                            Comenzar Curso
+                        </button>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="images/inversiones-financieras.jpg" alt="Inversiones Financieras" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Navigation -->
+            <nav id="courseNav" class="course-nav hidden">
+                <div class="nav-header">
+                    <h3>Módulos del Curso</h3>
+                    <button id="backToWelcome" class="btn-secondary">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </button>
+                </div>
+                <div class="nav-modules">
+                    <div class="module-card" data-module="1">
+                        <div class="module-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="module-content">
+                            <h4>Nivel 1: Introducción al Mundo de las Inversiones</h4>
+                            <p>Conceptos básicos, ahorro vs inversión, riesgo y recompensa</p>
+                            <div class="module-status">
+                                <span class="status-badge" id="status-1">No iniciado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="2">
+                        <div class="module-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="module-content">
+                            <h4>Nivel 2: Actores y Roles en los Mercados Financieros</h4>
+                            <p>Bancos centrales, brokers, reguladores, hedge funds</p>
+                            <div class="module-status">
+                                <span class="status-badge" id="status-2">Bloqueado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="3">
+                        <div class="module-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="module-content">
+                            <h4>Nivel 3: Instrumentos Financieros Básicos</h4>
+                            <p>Acciones, bonos, fondos mutuos, ETFs, commodities</p>
+                            <div class="module-status">
+                                <span class="status-badge" id="status-3">Bloqueado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="4">
+                        <div class="module-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="module-content">
+                            <h4>Nivel 4: Estrategias Avanzadas y Análisis de Mercado</h4>
+                            <p>Análisis fundamental, diversificación, derivados, alternatives</p>
+                            <div class="module-status">
+                                <span class="status-badge" id="status-4">Bloqueado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card" data-module="5">
+                        <div class="module-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="module-content">
+                            <h4>Nivel 5: Historia de los Mercados y Casos Reales</h4>
+                            <p>Historia de los mercados, crisis financieras, casos de estudio</p>
+                            <div class="module-status">
+                                <span class="status-badge" id="status-5">Bloqueado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-exam-section">
+                    <div class="exam-card" id="finalExam">
+                        <div class="exam-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="exam-content">
+                            <h4>Examen Final</h4>
+                            <p>Evaluación global de todos los conceptos aprendidos</p>
+                            <div class="exam-status">
+                                <span class="status-badge" id="exam-status">Bloqueado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Module Content Container -->
+            <div id="moduleContent" class="module-content-container hidden">
+                <!-- Module content will be loaded here dynamically -->
+            </div>
+
+            <!-- Exercise Container -->
+            <div id="exerciseContent" class="exercise-content-container hidden">
+                <!-- Exercise content will be loaded here dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Glossary Modal -->
+    <div id="glossaryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Glosario de Términos</h3>
+                <button class="modal-close" id="closeGlossary">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="glossary-search">
+                    <input type="text" id="glossarySearch" placeholder="Buscar término...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="glossary-content" id="glossaryContent">
+                    <!-- Glossary terms will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Recursos Adicionales</h4>
+                    <ul>
+                        <li><a href="https://www.investopedia.com/" target="_blank">Investopedia</a></li>
+                        <li><a href="https://www.argentina.gob.ar/cnv" target="_blank">CNV Argentina</a></li>
+                        <li><a href="https://www.sec.gov/" target="_blank">SEC USA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Libros Recomendados</h4>
+                    <ul>
+                        <li>El Inversor Inteligente - Benjamin Graham</li>
+                        <li>La Psicología del Dinero - Morgan Housel</li>
+                        <li>Padre Rico, Padre Pobre - Robert Kiyosaki</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sobre el Curso</h4>
+                    <p>Curso interactivo diseñado para enseñar inversiones financieras desde nivel básico hasta avanzado.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Curso de Inversiones Financieras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/glossary.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/exercises.js"></script>
+    <script src="js/quiz-system.js"></script>
+    <script src="js/simulations.js"></script>
+    <script src="js/final-exam.js"></script>
+    <script src="modules/module1_content.js"></script>
+    <script src="modules/module2_content.js"></script>
+    <script src="modules/module3_content.js"></script>
+    <script src="modules/module4_content.js"></script>
+    <script src="modules/module5_content.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
